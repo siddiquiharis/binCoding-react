@@ -1,9 +1,10 @@
 import axios from 'axios'
 import axiosInstance from '../axiosInstance'
 
-const INSTRUCTOR = 'in28minutes'
 const HOST_URL = 'http://localhost:8080'
 const AUTHENTICATION_URL = `${HOST_URL}/authenticate`
+const API_URL = `${HOST_URL}/api`
+const INDEX_URL = `${API_URL}/`
 
 class UserService {
     async authenticateUser(credentials){
@@ -29,8 +30,8 @@ class UserService {
                 'User-Agent': 'Axios',
                 'Authorization': 'Bearer ' + jwt
             }
-        // response = await instance.get('http://localhost:8080/api/');
-        var response = await axios.get("http://localhost:8080/api/", { headers: headers});
+        // response = await axiosInstance.get('http://localhost:8080/api/');
+        var response = await axios.get(INDEX_URL, { headers: headers});
 
         return response;
 

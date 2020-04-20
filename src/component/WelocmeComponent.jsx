@@ -22,7 +22,6 @@ class WelcomeComponent extends Component {
         
     }
 
-
     render(){
         return (
                 <h1>{this.state.message}</h1>

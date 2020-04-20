@@ -11,7 +11,6 @@ class BinCodingApp extends Component {
                     <h1>BinCoding Application</h1>
                     <Switch>
                         <Route path="/" exact component={LoginComponent} />
-                        {/* <Route path="/courses" exact component={LoginComponent} /> */}
                         <Route path="/welcome" component={WelocmeComponent} /> 
                     </Switch>
                 </>
